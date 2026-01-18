@@ -1,0 +1,13 @@
+package com.example.pracazaliczeniowa.data
+
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "champions")
+data class ChampionEntity(
+    @PrimaryKey val id: String,
+    val name: String,
+    val title: String,
+    val blurb: String,
+    val imageUrl: String // Przechowujemy pełny URL obrazka
+)

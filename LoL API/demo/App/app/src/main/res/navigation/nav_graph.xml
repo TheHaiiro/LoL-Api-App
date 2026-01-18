@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/championsListFragment">
+
+    <fragment
+        android:id="@+id/championsListFragment"
+        android:name="com.example.pracazaliczeniowa.ui.champions.ChampionsListFragment"
+        android:label="Champions"
+        tools:layout="@layout/fragment_champions_list">
+        <action
+            android:id="@+id/action_championsListFragment_to_championDetailFragment"
+            app:destination="@id/championDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/championDetailFragment"
+        android:name="com.example.pracazaliczeniowa.ui.champion_detail.ChampionDetailFragment"
+        android:label="Champion Details"
+        tools:layout="@layout/fragment_champion_detail">
+        <argument
+            android:name="championId"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
